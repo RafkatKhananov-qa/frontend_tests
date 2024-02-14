@@ -2,3 +2,5 @@ env
 __pycache__\
 .pytest_cache\
 **/__pycache__/
+allure-2.19.0
+my_allure_results
