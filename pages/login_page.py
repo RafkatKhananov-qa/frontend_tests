@@ -61,9 +61,3 @@ class Login_page(Base):
         self.input_password("secret_sauce")
         self.click_button_login()
         self.assert_word(self.get_main_word(), 'Products')
-
-
-       
-
-
-
