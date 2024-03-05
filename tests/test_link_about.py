@@ -11,6 +11,8 @@ from selenium.webdriver.chrome.options import Options
 
 def test_link_about():
     options = Options()
+    options.addArguments("--no-sandbox")
+    options.addArguments("--disable-dev-shm-usage")
     options.headless = True
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 

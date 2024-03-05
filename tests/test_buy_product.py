@@ -2,7 +2,6 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.support import expected_conditions as EC
-import sys
 from pages.cart_page import Cart_page
 from pages.client_information_page import Client_information_page
 from pages.finish_page import Finish_page
@@ -16,6 +15,8 @@ from selenium.webdriver.chrome.options import Options
 @pytest.mark.order(3)
 def test_buy_product_1():
     options = Options()
+    options.addArguments("--no-sandbox")
+    options.addArguments("--disable-dev-shm-usage")
     options.headless = True
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
@@ -47,7 +48,11 @@ def test_buy_product_1():
 
 @pytest.mark.order(1)
 def test_buy_product_2():
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    options = Options()
+    options.addArguments("--no-sandbox")
+    options.addArguments("--disable-dev-shm-usage")
+    options.headless = True
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
     print("Start Test 2")
 
@@ -70,7 +75,11 @@ def test_buy_product_2():
 
 # @pytest.mark.order(2)
 def test_buy_product_3():
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    options = Options()
+    options.addArguments("--no-sandbox")
+    options.addArguments("--disable-dev-shm-usage")
+    options.headless = True
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
     print("Start Test 3")
 
