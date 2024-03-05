@@ -42,7 +42,6 @@ def test_buy_product_1():
 
 
     print("Finish Test 1")
-    # time.sleep(10)
     driver.quit()
 
 
