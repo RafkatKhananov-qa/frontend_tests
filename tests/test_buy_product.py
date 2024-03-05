@@ -1,9 +1,6 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
-import time
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import sys
 from pages.cart_page import Cart_page
@@ -11,14 +8,16 @@ from pages.client_information_page import Client_information_page
 from pages.finish_page import Finish_page
 from pages.main_page import Main_page
 from pages.payment_page import Payment_page
-sys.path.append("C:\\Users\\Rafkat\\Desktop\\Selenium\\finalproject")
 from pages.login_page import Login_page
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 
 
 @pytest.mark.order(3)
 def test_buy_product_1():
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    options = Options()
+    options.headless = True
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
     print("Start Test 1")
 
