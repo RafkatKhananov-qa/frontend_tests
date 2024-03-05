@@ -28,9 +28,9 @@ jobs:
         - name: Store allure results
           uses: actions/upload-artifact@v3
           with:
-            name: allure-results
+            name: my_allure_results
             path: 
-              allure-results
+              my_allure_results
             retention-days: 1
 
     generate-report:
