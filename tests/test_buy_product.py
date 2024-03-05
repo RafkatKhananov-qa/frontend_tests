@@ -15,8 +15,8 @@ from selenium.webdriver.chrome.options import Options
 @pytest.mark.order(3)
 def test_buy_product_1():
     options = Options()
-    options.addArguments("--no-sandbox")
-    options.addArguments("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
     options.headless = True
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
@@ -49,8 +49,8 @@ def test_buy_product_1():
 @pytest.mark.order(1)
 def test_buy_product_2():
     options = Options()
-    options.addArguments("--no-sandbox")
-    options.addArguments("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
     options.headless = True
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
@@ -76,8 +76,8 @@ def test_buy_product_2():
 # @pytest.mark.order(2)
 def test_buy_product_3():
     options = Options()
-    options.addArguments("--no-sandbox")
-    options.addArguments("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
     options.headless = True
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
