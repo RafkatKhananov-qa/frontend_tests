@@ -21,5 +21,5 @@ def test_search_google():
     time.sleep(3)
     text_google = driver.find_element(By.XPATH, "//p[@aria-level='3' and text()='По запросу ']")
     value_text = text_google.text
-    assert value_text == f"По запросу 546547657567rhffdhbfddfhdfhfdbfbbbdf ничего не найдено. "
+    assert value_text == "По запросу 546547657567rhffdhbfddfhdfhfdbfbbbdf ничего не найдено. "
     driver.quit()
