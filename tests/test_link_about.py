@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 import time
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from pages.main_page import Main_page
 from pages.login_page import Login_page
